@@ -52,8 +52,16 @@ def get_user_team(user_id):
 async def on_ready():
     print(f'{bot.user} is online!')
     try:
-        # Sync to specific guild for instant updates
-        guild = discord.Object(id=671891039765790731)  # Your server ID
+        guild = discord.Object(id=671891039765790731)
+
+        # Clear global commands (removes duplicates)
+        bot.tree.clear_commands(guild=None)
+        await bot.tree.sync()
+
+        # Clear guild commands and re-sync fresh
+        bot.tree.clear_commands(guild=guild)
+
+        # Re-add all commands to guild only
         bot.tree.copy_global_to(guild=guild)
         synced = await bot.tree.sync(guild=guild)
         print(f'Synced {len(synced)} command(s) to guild')
