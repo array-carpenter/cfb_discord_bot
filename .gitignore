@@ -4,6 +4,10 @@
 # Registered teams data (user-specific)
 registered_teams.json
 
+# History data (keep templates, ignore actual data)
+data/game_history.csv
+data/season_history.csv
+
 # Python
 __pycache__/
 *.py[cod]
