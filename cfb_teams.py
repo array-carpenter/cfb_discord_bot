@@ -77,20 +77,68 @@ CFB_TEAMS = {
     "Virginia Tech": {"id": 259, "conference": "ACC"},
     "Wake Forest": {"id": 154, "conference": "ACC"},
 
-    # Other notable teams
-    "Notre Dame": {"id": 87, "conference": "Independent"},
-    "Army": {"id": 349, "conference": "Independent"},
+    # Conference USA
+    "Charlotte": {"id": 2429, "conference": "Conference USA"},
+    "East Carolina": {"id": 151, "conference": "Conference USA"},
+    "FAU": {"id": 2226, "conference": "Conference USA"},
+    "FIU": {"id": 2229, "conference": "Conference USA"},
+    "Jacksonville State": {"id": 55, "conference": "Conference USA"},
+    "Kennesaw State": {"id": 338, "conference": "Conference USA"},
+    "Liberty": {"id": 2335, "conference": "Conference USA"},
+    "Louisiana Tech": {"id": 2348, "conference": "Conference USA"},
+    "Middle Tennessee": {"id": 2393, "conference": "Conference USA"},
+    "New Mexico State": {"id": 166, "conference": "Conference USA"},
+    "Sam Houston": {"id": 2534, "conference": "Conference USA"},
+    "UTEP": {"id": 2638, "conference": "Conference USA"},
+    "Western Kentucky": {"id": 98, "conference": "Conference USA"},
+
+    # AAC
     "Navy": {"id": 2426, "conference": "AAC"},
     "Memphis": {"id": 235, "conference": "AAC"},
     "Tulane": {"id": 2655, "conference": "AAC"},
+    "South Florida": {"id": 58, "conference": "AAC"},
+    "Temple": {"id": 218, "conference": "AAC"},
+    "Tulsa": {"id": 202, "conference": "AAC"},
+    "UAB": {"id": 5, "conference": "AAC"},
+    "UTSA": {"id": 2636, "conference": "AAC"},
+    "Rice": {"id": 242, "conference": "AAC"},
+    "North Texas": {"id": 249, "conference": "AAC"},
+    "Army": {"id": 349, "conference": "AAC"},
+
+    # Mountain West
     "Boise State": {"id": 68, "conference": "Mountain West"},
     "San Diego State": {"id": 21, "conference": "Mountain West"},
     "Fresno State": {"id": 278, "conference": "Mountain West"},
     "UNLV": {"id": 2439, "conference": "Mountain West"},
-    "Liberty": {"id": 2335, "conference": "Conference USA"},
-    "James Madison": {"id": 256, "conference": "Sun Belt"},
+    "Air Force": {"id": 2005, "conference": "Mountain West"},
+    "Colorado State": {"id": 36, "conference": "Mountain West"},
+    "Hawaii": {"id": 62, "conference": "Mountain West"},
+    "Nevada": {"id": 2440, "conference": "Mountain West"},
+    "New Mexico": {"id": 167, "conference": "Mountain West"},
+    "San Jose State": {"id": 23, "conference": "Mountain West"},
+    "Utah State": {"id": 328, "conference": "Mountain West"},
+    "Wyoming": {"id": 2751, "conference": "Mountain West"},
+
+    # Sun Belt
     "Appalachian State": {"id": 2026, "conference": "Sun Belt"},
+    "Arkansas State": {"id": 2032, "conference": "Sun Belt"},
     "Coastal Carolina": {"id": 324, "conference": "Sun Belt"},
+    "Georgia Southern": {"id": 290, "conference": "Sun Belt"},
+    "Georgia State": {"id": 2247, "conference": "Sun Belt"},
+    "James Madison": {"id": 256, "conference": "Sun Belt"},
+    "Louisiana": {"id": 309, "conference": "Sun Belt"},
+    "Marshall": {"id": 276, "conference": "Sun Belt"},
+    "Old Dominion": {"id": 295, "conference": "Sun Belt"},
+    "South Alabama": {"id": 6, "conference": "Sun Belt"},
+    "Southern Miss": {"id": 2572, "conference": "Sun Belt"},
+    "Texas State": {"id": 326, "conference": "Sun Belt"},
+    "Troy": {"id": 2653, "conference": "Sun Belt"},
+    "ULM": {"id": 2433, "conference": "Sun Belt"},
+
+    # Independents
+    "Notre Dame": {"id": 87, "conference": "Independent"},
+    "UConn": {"id": 41, "conference": "Independent"},
+    "UMass": {"id": 113, "conference": "Independent"},
 }
 
 def get_team_logo(team_name):
