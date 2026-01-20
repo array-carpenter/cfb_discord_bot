@@ -59,13 +59,17 @@ async def on_ready():
 
 
 # Autocomplete for team names
-async def team_autocomplete(interaction: discord.Interaction, current: str):
-    teams = get_all_teams()
-    if current:
-        matches = [t for t in teams if current.lower() in t.lower()]
-    else:
-        matches = teams[:25]  # Show first 25 if no input
-    return [app_commands.Choice(name=team, value=team) for team in matches[:25]]
+async def team_autocomplete(interaction: discord.Interaction, current: str) -> list[app_commands.Choice[str]]:
+    try:
+        teams = get_all_teams()
+        if current:
+            matches = [t for t in teams if current.lower() in t.lower()][:25]
+        else:
+            matches = teams[:25]
+        return [app_commands.Choice(name=team, value=team) for team in matches]
+    except Exception as e:
+        print(f"Autocomplete error: {e}")
+        return []
 
 
 @bot.tree.command(name='register', description='Register your CFB team')
