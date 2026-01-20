@@ -1,0 +1,21 @@
+# Environment variables (KEEP PRIVATE)
+.env
+
+# Registered teams data (user-specific)
+registered_teams.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
