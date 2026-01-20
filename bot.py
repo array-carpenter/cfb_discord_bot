@@ -52,10 +52,22 @@ def get_user_team(user_id):
 async def on_ready():
     print(f'{bot.user} is online!')
     try:
-        synced = await bot.tree.sync()
-        print(f'Synced {len(synced)} command(s)')
+        # Sync to specific guild for instant updates
+        guild = discord.Object(id=671891039765790731)  # Your server ID
+        bot.tree.copy_global_to(guild=guild)
+        synced = await bot.tree.sync(guild=guild)
+        print(f'Synced {len(synced)} command(s) to guild')
     except Exception as e:
         print(f'Failed to sync commands: {e}')
+
+
+@bot.tree.error
+async def on_app_command_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
+    print(f'Command error: {error}')
+    try:
+        await interaction.response.send_message(f"An error occurred: {error}", ephemeral=True)
+    except:
+        pass
 
 
 # Autocomplete for team names
